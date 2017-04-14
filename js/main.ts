@@ -6,25 +6,16 @@ angular.module('demoApp',[]);
 interface IMainController{
     count:number;
     message:string;
-    show:bool;
+    show:boolean;
     inc:()=>void;
     dec:()=>void;
 }
 
 class MainController implements IMainController{
 
-    count = 0;
+    count = 10;
     message: string = 'yeah';
-    show:bool = true;
-
-    static $inject = ['$scope'];
-    constructor($scope){
-        $scope.vm = this;
-
-        // Demo code
-        $scope.show = true;
-        $scope.message = 'yeah';
-    }
+    show:boolean = true;
 
     inc(){
        this.count = this.count + 1;

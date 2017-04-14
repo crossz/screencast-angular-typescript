@@ -11,7 +11,7 @@
         <!--Our Styles-->
         <link rel="stylesheet" href="css/main.css">
     </head>
-    <body ng-controller='MainController'>
+    <body ng-controller='MainController as vm'>
 
         <!-- Add your site or application content here -->
         <div>Current count is : {{vm.count}}</div>
@@ -22,7 +22,7 @@
         <button class="btn btn-danger" ng-click="vm.dec()">Decrease!</button>
 
 
-        <p data-ng-switch="show">
+        <p data-ng-switch="vm.show">
              <input data-ng-switch-when="true" type="text" ng-model="vm.message" />
          </p>
 
